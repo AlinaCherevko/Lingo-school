@@ -1,29 +1,33 @@
-import {
-  HeaderContainer,
-  Navigation,
-  StyledLink,
-  IconWrapper,
-} from './Header.styled';
-import sprite from 'assets/sprite.svg';
+import { useState } from 'react';
+import Logo from '../Logo/Logo';
+import Modal from '../../components/Modal/Modal';
+import Navigation from '../Navigation/Navigation';
+import Registration from '../Registration/Registration';
+import css from './Header.module.css';
+import RegistrationModal from '../RegistrationModal/RegistrationModal';
 
 export const Header = () => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const onOpenModal = () => {
+    setIsModalVisible(true);
+  };
+  const onCloseModal = () => {
+    setIsModalVisible(false);
+  };
 
   return (
-    <HeaderContainer>
-      <Navigation>
-        <StyledLink to="/first">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          First
-        </StyledLink>
-        <StyledLink to="/second">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          Second
-        </StyledLink>
-      </Navigation>
-    </HeaderContainer>
+    <div className="container">
+      <div className={css.header}>
+        <Logo />
+        <Navigation />
+        <Registration onOpenModal={onOpenModal} />
+      </div>
+      {isModalVisible && (
+        <Modal onClose={onCloseModal}>
+          <RegistrationModal />
+        </Modal>
+      )}
+    </div>
   );
 };

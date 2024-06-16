@@ -1,0 +1,7 @@
+.navigation {
+  display: flex;
+  gap: 28px;
+}
+.headerLink {
+  color: inherit;
+}

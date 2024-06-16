@@ -5,10 +5,14 @@ import { Header } from 'components/Header/Header';
 const SharedLayout = () => {
   return (
     <>
-      <Header />
-      <Suspense fallback={null}>
-        <Outlet />
-      </Suspense>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
+      </main>
     </>
   );
 };

@@ -1,0 +1,37 @@
+.heroText {
+  padding: 98px 108px 98px 64px;
+  background-color: #f8f8f8;
+  border-radius: 30px;
+}
+.title {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 32px;
+}
+.language {
+  font-style: italic;
+  background-color: var(--secondary-green-CBDED3);
+  margin-left: 12px;
+}
+.text {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 64px;
+  max-width: 471px;
+}
+.link {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  padding: 16px 88px;
+  background-color: var(--secondary-green-CBDED3);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: var(--my-transition-duration);
+  transition-timing-function: var(--my-transition-timing-function);
+  transition-delay: var(--my-transition-delay);
+}
+.link:hover {
+  background-color: var(--primary-green-9FBAAE);
+}

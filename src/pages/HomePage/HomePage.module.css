@@ -1,0 +1,29 @@
+.heroWrapper {
+  display: flex;
+  gap: 24px;
+}
+.advantages {
+  padding: 24px 0 32px;
+}
+.advantagesList {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 120px;
+  border: 2px dashed var(--secondary-green-CBDED3);
+  border-radius: 30px;
+}
+.advantageItem {
+  display: flex;
+  gap: 15px;
+}
+.content {
+  white-space: nowrap;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.text {
+  font-size: 14px;
+  line-height: 18px;
+}

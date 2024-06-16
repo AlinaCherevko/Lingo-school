@@ -1,0 +1,68 @@
+.teacherItem {
+  display: flex;
+  gap: 48px;
+  width: 1184px;
+  background-color: var(--primary-white-FFFFFF);
+  border-radius: 24px;
+  padding: 24px;
+}
+.imgWrapper {
+}
+.textWrapper {
+  display: flex;
+  margin-bottom: 8px;
+}
+.languages {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-grey-8A8A89);
+}
+.image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  padding: 12px;
+  border: 3px solid var(--secondary-green-CBDED3);
+}
+.list {
+  display: flex;
+  gap: 16px;
+  margin-left: 192px;
+}
+.item {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.languageWrapper {
+  display: flex;
+  gap: 4px;
+}
+.languageList {
+  display: flex;
+}
+.languageItem {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.name {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+.optionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}

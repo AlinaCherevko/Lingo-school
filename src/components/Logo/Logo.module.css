@@ -1,0 +1,9 @@
+.headerLink {
+  font-weight: 500;
+  color: inherit;
+}
+.logoWrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
