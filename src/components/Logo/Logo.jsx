@@ -4,7 +4,7 @@ import css from './Logo.module.css';
 const Logo = () => {
   return (
     <div className={css.logoWrapper}>
-      <img src="/ukraine-logo.svg" alt="" />
+      <img src="/Lingo-school/ukraine-logo.svg" alt="logo" />
       <NavLink className={css.headerLink} to="/">
         LearnLingo
       </NavLink>

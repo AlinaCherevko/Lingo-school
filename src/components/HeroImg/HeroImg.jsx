@@ -1,16 +1,18 @@
 import css from './HeroImg.module.css';
+import heroImg1x from '../../assets/hero-min-1x.jpg';
+import heroImg2x from '../../assets/hero-min-2x.jpg';
 
 const HeroImg = () => {
   return (
     <>
       <picture>
         <source
-          srcSet="/src/assets/hero-min-1x.jpg 1x, /src/assets/hero-min-2x.jpg 2x"
+          srcSet={`${heroImg1x} 1x, ${heroImg2x} 2x`}
           media="(min-width: 320px)"
         />
         <img
           className={css.image}
-          src="/src/assets/hero-min-1x.jpg"
+          src={heroImg1x}
           alt="img-girl"
           width="568"
           height="530"
