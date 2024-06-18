@@ -30,9 +30,24 @@
   margin-left: 192px;
 }
 .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
+  padding-right: 16px;
+  border-right: 1px solid rgba(18, 20, 23, 0.1);
+}
+.item:last-child {
+  border: none;
+}
+.heart {
+  margin-left: 64px;
+  cursor: pointer;
+}
+.price {
+  color: var(--primary-green-9FBAAE);
 }
 .languageWrapper {
   display: flex;
@@ -45,6 +60,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
+  margin-right: 5px;
 }
 .name {
   font-size: 24px;
@@ -65,4 +81,34 @@
   background-color: transparent;
   border: none;
   text-decoration: underline;
+  margin-bottom: 32px;
+  transition: all;
+  transition-duration: var(--my-transition-duration);
+  transition-timing-function: var(--my-transition-timing-function);
+  transition-delay: var(--my-transition-delay);
+}
+.button:hover {
+  color: var(--primary-green-9FBAAE);
+}
+.btnList {
+  margin-bottom: 32px;
+  display: flex;
+  gap: 8px;
+}
+.levelItem {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 35px;
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all;
+  transition-duration: var(--my-transition-duration);
+  transition-timing-function: var(--my-transition-timing-function);
+  transition-delay: var(--my-transition-delay);
+}
+.levelItem:hover {
+  background-color: var(--primary-green-9FBAAE);
 }

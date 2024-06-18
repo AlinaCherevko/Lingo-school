@@ -1,15 +1,48 @@
 .list {
   display: flex;
   gap: 16px;
-  align-items: baseline;
+  align-items: center;
+}
+.item {
+  display: flex;
 }
 .logIn {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
   background-color: transparent;
   border: none;
+  transition: all;
+  transition-duration: var(--my-transition-duration);
+  transition-timing-function: var(--my-transition-timing-function);
+  transition-delay: var(--my-transition-delay);
 }
+.logIn:hover {
+  color: var(--primary-green-9FBAAE);
+}
+
+.img {
+  width: 20px;
+  height: 20px;
+  filter: invert(74%) sepia(13%) saturate(426%) hue-rotate(102deg)
+    brightness(89%) contrast(83%);
+}
+
 .registration {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
   background-color: #121417;
   border-radius: 12px;
   padding: 14px 39px;
   color: #ffffff;
+  transition: all;
+  transition-duration: var(--my-transition-duration);
+  transition-timing-function: var(--my-transition-timing-function);
+  transition-delay: var(--my-transition-delay);
+}
+.registration:hover {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 6px 10px rgba(0, 0, 0, 0.2);
 }

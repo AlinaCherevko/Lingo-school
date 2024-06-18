@@ -2,8 +2,11 @@ import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import css from './Form.module.css';
+//import { useAuth } from '../../hooks/useAuth';
+//import { useEffect } from 'react';
 
-const Form = () => {
+const Form = ({ title, handleClick, onClose }) => {
+  //const { isAuth } = useAuth();
   const schema = Yup.object().shape({
     name: Yup.string()
       .min(2, 'Too short')
@@ -25,8 +28,24 @@ const Form = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    handleClick(data.name, data.email, data.password);
+    onClose();
     reset();
   };
+  // const onSubmit = async (data) => {
+  //   try {
+  //     console.log(data);
+  //     await handleClick(data.name, data.email, data.password);
+  //     onClose();
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   } finally {
+  //     reset();
+  //   }
+
+  //   reset();
+  // };
+
   return (
     <>
       <form className={css.form} onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +79,7 @@ const Form = () => {
           </div>
         </div>
         <button className={css.button} type="submit">
-          Sign up
+          {title}
         </button>
       </form>
     </>

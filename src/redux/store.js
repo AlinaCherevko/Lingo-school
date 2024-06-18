@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
-  //persistReducer,
+  persistReducer,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -10,8 +10,13 @@ import {
   REGISTER,
 } from 'redux-persist';
 import { teachersApi } from './servises';
-//import storage from 'redux-persist/lib/storage';
-
+import { userReducer } from './userSlice';
+import storage from 'redux-persist/lib/storage';
+const authConfig = {
+  key: 'user',
+  storage,
+  whitelist: ['token', 'name', 'email', 'id'],
+};
 // const favoritesConfig = {
 //   key: 'favorites',
 //   storage,
@@ -21,6 +26,7 @@ import { teachersApi } from './servises';
 export const store = configureStore({
   reducer: {
     [teachersApi.reducerPath]: teachersApi.reducer,
+    user: persistReducer(authConfig, userReducer),
   },
 
   middleware: (getDefaultMiddleware) =>

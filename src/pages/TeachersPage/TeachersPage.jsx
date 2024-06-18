@@ -4,7 +4,7 @@ import css from './TeachersPage.module.css';
 
 const TeachersPage = () => {
   const { data } = useGetAllTeachersQuery();
-  console.log(data);
+  //console.log(data);
 
   return (
     <section className={css.teachersSection}>

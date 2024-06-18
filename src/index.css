@@ -53,3 +53,7 @@ button {
   margin-right: auto;
   width: 100%;
 }
+a.active {
+  color: var(--primary-green-9FBAAE);
+  border-bottom: 2px solid var(--primary-green-9FBAAE);
+}

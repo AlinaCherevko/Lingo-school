@@ -34,4 +34,5 @@
 }
 .link:hover {
   background-color: var(--primary-green-9FBAAE);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }

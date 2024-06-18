@@ -1,7 +1,8 @@
-import Form from '../Form/Form';
+import Auth from '../Auth/Auth';
+
 import css from './RegistrationModal.module.css';
 
-const RegistrationModal = () => {
+const RegistrationModal = ({ onClose }) => {
   return (
     <div className={css.modal}>
       <h2 className={css.title}>Registration</h2>
@@ -9,7 +10,7 @@ const RegistrationModal = () => {
         Thank you for your interest in our platform! In order to register, we
         need some information. Please provide us with the following information
       </p>
-      <Form />
+      <Auth onClose={onClose} />
     </div>
   );
 };
