@@ -1,0 +1,5 @@
+[
+  { "name": "name", "label": " Name " },
+  { "name": "email", "label": "Email" },
+  { "name": "password", "label": "Password" }
+]

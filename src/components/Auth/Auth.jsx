@@ -6,11 +6,12 @@ import {
 import Form from '../Form/Form';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/userSlice';
+import authData from '../../data/register.json';
 
 const Auth = ({ onClose }) => {
   const dispatch = useDispatch();
 
-  const handleSignUp = async (name, email, password) => {
+  const handleSignUp = async ({ name, email, password }) => {
     const auth = getAuth();
 
     try {
@@ -35,7 +36,14 @@ const Auth = ({ onClose }) => {
     }
   };
 
-  return <Form title="Sign up" handleClick={handleSignUp} onClose={onClose} />;
+  return (
+    <Form
+      title="Sign up"
+      handleClick={handleSignUp}
+      onClose={onClose}
+      dataForm={authData}
+    />
+  );
 };
 
 export default Auth;

@@ -1,5 +1,4 @@
 import Auth from '../Auth/Auth';
-
 import css from './RegistrationModal.module.css';
 
 const RegistrationModal = ({ onClose }) => {
