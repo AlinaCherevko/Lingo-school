@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-
+import 'react-toastify/dist/ReactToastify.css';
 import TeachersPage from './pages/TeachersPage/TeachersPage';
 import HomePage from './pages/HomePage/HomePage';
 import FavoritePage from './pages/FavoritePage/FavoritePage';

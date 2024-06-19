@@ -1,7 +1,7 @@
 import BookingForm from '../BookingForm/BookingForm';
 import css from './BookingModal.module.css';
 
-const BookingModal = ({ item }) => {
+const BookingModal = ({ item, onClose }) => {
   return (
     <div className={css.modal}>
       <h2 className={css.title}>Book trial lesson</h2>
@@ -21,7 +21,7 @@ const BookingModal = ({ item }) => {
       <h3 className={css.mainReason}>
         What is your main reason for learning English?
       </h3>
-      <BookingForm />
+      <BookingForm onClose={onClose} />
     </div>
   );
 };

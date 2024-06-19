@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/userSlice';
 import loginData from '../../data/login.json';
+import { toast } from 'react-toastify';
 
 const LogIn = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -21,8 +22,9 @@ const LogIn = ({ onClose }) => {
           id: user.uid,
         })
       );
+      toast.success('Log in successfully');
     } catch (error) {
-      console.log(error.message);
+      toast.error(`${error.message}`);
     }
   };
 

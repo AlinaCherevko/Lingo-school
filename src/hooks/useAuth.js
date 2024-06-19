@@ -11,3 +11,11 @@ export function useAuth() {
     id,
   };
 }
+export function useFavorite() {
+  const { favorite } = useSelector((state) => state.favorite);
+
+  return {
+    isFavorite: !!favorite.length,
+    favorite,
+  };
+}

@@ -3,6 +3,8 @@
   padding: 64px;
   background-color: var(--primary-white-FFFFFF);
   border-radius: 30px;
+  height: 98vh;
+  overflow: auto;
 }
 .title {
   font-size: 40px;

@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import Form from '../Form/Form';
+import data from '../../data/booking.json';
 import css from './BookingForm.module.css';
 
-const BookingForm = () => {
+const BookingForm = ({ onClose }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const options = [
     { label: 'Career and business' },
@@ -14,6 +16,11 @@ const BookingForm = () => {
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
+
+  const handleClick = () => {
+    console.log('booking is success');
+  };
+
   return (
     <div>
       <ul className={css.list}>
@@ -34,6 +41,12 @@ const BookingForm = () => {
           </li>
         ))}
       </ul>
+      <Form
+        title="Book"
+        handleClick={handleClick}
+        onClose={onClose}
+        dataForm={data}
+      />
     </div>
   );
 };

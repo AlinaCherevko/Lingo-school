@@ -3,11 +3,36 @@ import css from './TeachersItem.module.css';
 import ReadMore from '../ReadMore/ReadMore';
 import Modal from '../Modal/Modal';
 import BookingModal from '../BookingModal/BookingModal';
+import { useDispatch } from 'react-redux';
+import { addFavorite, deleteFavorite } from '../../redux/favoriteSlice';
+import { useAuth, useFavorite } from '../../hooks/useAuth';
+import { toast } from 'react-toastify';
 
 const TeachersItem = ({ item }) => {
+  const { isAuth } = useAuth();
+
+  const dispatch = useDispatch();
   const [expendedContent, setExpendedContent] = useState(false);
   const [isVisibleModal, setIsVisibleModal] = useState(false);
-  //console.log(isVisibleModal);
+
+  const { favorite } = useFavorite();
+
+  const inFavorite = favorite.some((fav) => fav.id === item.id);
+
+  const addToFavorite = () => {
+    if (inFavorite === true) {
+      dispatch(deleteFavorite(item.id));
+      toast.success('Deleted successfully');
+    }
+    if (inFavorite === false && isAuth === true) {
+      dispatch(addFavorite(item));
+      toast.success('Add successfully');
+    }
+    if (isAuth === false) {
+      toast.info('Only for registered users!');
+    }
+  };
+
   const onClose = () => {
     setIsVisibleModal(false);
   };
@@ -46,7 +71,10 @@ const TeachersItem = ({ item }) => {
               </li>
             </ul>
             <img
-              className={css.heart}
+              onClick={addToFavorite}
+              className={
+                inFavorite ? `${css.heart} ${css.favorite}` : css.heart
+              }
               src="/Lingo-school/heart.svg"
               alt="heart"
             />
@@ -99,7 +127,7 @@ const TeachersItem = ({ item }) => {
       </div>
       {isVisibleModal && (
         <Modal onClose={onClose}>
-          <BookingModal item={item} />
+          <BookingModal item={item} onClose={onClose} />
         </Modal>
       )}
     </>

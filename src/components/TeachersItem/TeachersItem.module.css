@@ -46,6 +46,14 @@
   margin-left: 64px;
   cursor: pointer;
 }
+.heart:hover {
+  filter: invert(74%) sepia(13%) saturate(426%) hue-rotate(102deg)
+    brightness(89%) contrast(83%);
+}
+.favorite {
+  filter: invert(74%) sepia(13%) saturate(426%) hue-rotate(102deg)
+    brightness(89%) contrast(83%);
+}
 .price {
   color: var(--primary-green-9FBAAE);
 }

@@ -7,6 +7,7 @@ import Form from '../Form/Form';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/userSlice';
 import authData from '../../data/register.json';
+import { toast } from 'react-toastify';
 
 const Auth = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -21,8 +22,7 @@ const Auth = ({ onClose }) => {
         password
       );
       await updateProfile(user, { displayName: name });
-      //console.log(user);
-      //console.log(user.displayName);
+
       dispatch(
         setUser({
           name: user.displayName,
@@ -31,8 +31,9 @@ const Auth = ({ onClose }) => {
           id: user.uid,
         })
       );
-    } catch (e) {
-      console.log(e.message);
+      toast.success('Register successfully');
+    } catch (error) {
+      toast.error(`${error.message}`);
     }
   };
 
