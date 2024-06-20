@@ -1,3 +1,7 @@
 .teachersSection {
   background-color: var(--primary-beige-EEEEEE);
 }
+.filters {
+  display: flex;
+  justify-content: center;
+}
