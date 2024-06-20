@@ -29,7 +29,7 @@ const TeachersItem = ({ item }) => {
       toast.success('Add successfully');
     }
     if (isAuth === false) {
-      toast.info('Only for registered users!');
+      toast.warning('Only for registered users!');
     }
   };
 

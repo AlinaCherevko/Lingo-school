@@ -1,21 +1,28 @@
 import { useState } from 'react';
-import CostSelector from '../../components/Selector/CostSelector';
+
 import TeachersList from '../../components/TeachersList/TeachersList';
 import { useGetAllTeachersQuery } from '../../redux/servises';
+import LanguageSelector from '../../components/Selector/LanguageSelector/LanguageSelector';
 import css from './TeachersPage.module.css';
+import CostSelector from '../../components/Selector/CostSelector/CostSelector';
 
 const TeachersPage = () => {
   const { data } = useGetAllTeachersQuery();
-  console.log(data);
   const [dataToShow, setDataToShow] = useState(data);
-  console.log(dataToShow);
 
   const filterByPrice = (value) => {
     const filteredAdverts = data.filter(
       (item) => item.price_per_hour === +value
     );
     setDataToShow(filteredAdverts);
-    console.log(dataToShow);
+  };
+
+  const filterByLanguage = (lang) => {
+    const filteredAdvertsByLanguage = data.filter((item) =>
+      item.languages.includes(lang)
+    );
+
+    setDataToShow(filteredAdvertsByLanguage);
   };
 
   return (
@@ -24,6 +31,7 @@ const TeachersPage = () => {
         {data && (
           <>
             <div className={css.filters}>
+              <LanguageSelector filterByLanguage={filterByLanguage} />
               <CostSelector filterByPrice={filterByPrice} />
             </div>
             <TeachersList data={dataToShow} />

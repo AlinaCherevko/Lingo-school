@@ -10,7 +10,7 @@ import { removeUser } from '../../redux/userSlice';
 const Registration = () => {
   const { isAuth } = useAuth();
   const dispatch = useDispatch();
-  console.log(isAuth);
+
   const [isModalRegistrationVisible, setIsModalRegistrationVisible] =
     useState(false);
   const [isModalLogInVisible, setIsModalLogInVisible] = useState(false);

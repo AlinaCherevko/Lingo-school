@@ -36,6 +36,7 @@
   font-weight: 500;
   padding: 16px 187px;
   border-radius: 12px;
+  width: 438px;
   border: none;
   background-color: var(--secondary-green-CBDED3);
   transition: all;
