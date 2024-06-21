@@ -24,13 +24,11 @@ const Registration = () => {
       ) : (
         <ul className={css.list}>
           <li className={css.item}>
-            <svg className={css.img}>
-              <use xlinkHref="/Lingo-school/login.svg"></use>
-            </svg>
             <img
               className={css.img}
               src="/Lingo-school/login.svg"
               alt="login"
+              loading="lazy"
             />
             <button
               onClick={() => setIsModalLogInVisible(true)}
@@ -49,24 +47,7 @@ const Registration = () => {
           </li>
         </ul>
       )}
-      {/* <ul className={css.list}>
-        <li>
-          <button
-            onClick={() => setIsModalLogInVisible(true)}
-            className={css.logIn}
-          >
-            Log in
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => setIsModalRegistrationVisible(true)}
-            className={css.registration}
-          >
-            Registration
-          </button>
-        </li>
-      </ul> */}
+
       {isModalRegistrationVisible && (
         <Modal onClose={() => setIsModalRegistrationVisible(false)}>
           <RegistrationModal

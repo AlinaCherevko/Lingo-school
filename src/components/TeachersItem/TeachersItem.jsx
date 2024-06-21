@@ -52,6 +52,7 @@ const TeachersItem = ({ item }) => {
                   alt="book"
                   width="16px"
                   height="16px"
+                  loading="lazy"
                 />
                 Lessons online
               </li>
@@ -62,6 +63,7 @@ const TeachersItem = ({ item }) => {
                   alt="star"
                   width="16px"
                   height="16px"
+                  loading="lazy"
                 />
                 Rating: {item.rating}
               </li>
@@ -77,6 +79,7 @@ const TeachersItem = ({ item }) => {
               }
               src="/Lingo-school/heart.svg"
               alt="heart"
+              loading="lazy"
             />
           </div>
           <h2 className={css.name}>

@@ -5,6 +5,7 @@ import { useGetAllTeachersQuery } from '../../redux/servises';
 import LanguageSelector from '../../components/Selector/LanguageSelector/LanguageSelector';
 import css from './TeachersPage.module.css';
 import CostSelector from '../../components/Selector/CostSelector/CostSelector';
+import LevelSelector from '../../components/Selector/LevelSelector/LevelSelector';
 
 const TeachersPage = () => {
   const { data } = useGetAllTeachersQuery();
@@ -21,8 +22,14 @@ const TeachersPage = () => {
     const filteredAdvertsByLanguage = data.filter((item) =>
       item.languages.includes(lang)
     );
-
     setDataToShow(filteredAdvertsByLanguage);
+  };
+
+  const filterByLevel = (level) => {
+    const filteredAdvertsByLevel = data.filter((item) =>
+      item.levels.includes(level)
+    );
+    setDataToShow(filteredAdvertsByLevel);
   };
 
   return (
@@ -31,6 +38,7 @@ const TeachersPage = () => {
         {data && (
           <>
             <div className={css.filters}>
+              <LevelSelector filterByLevel={filterByLevel} />
               <LanguageSelector filterByLanguage={filterByLanguage} />
               <CostSelector filterByPrice={filterByPrice} />
             </div>

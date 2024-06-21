@@ -1,5 +1,6 @@
 .teachersSection {
   background-color: var(--primary-beige-EEEEEE);
+  min-height: 100vh;
 }
 .filters {
   display: flex;

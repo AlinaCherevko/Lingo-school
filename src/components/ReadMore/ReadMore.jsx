@@ -1,8 +1,6 @@
 import css from './ReadMore.module.css';
 
 const ReadMore = ({ item, setIsVisibleModal }) => {
-  //const [isVisibleModal, setIsVisibleModal] = useState(false);
-
   const openBookingModal = () => {
     setIsVisibleModal(true);
   };
@@ -18,7 +16,7 @@ const ReadMore = ({ item, setIsVisibleModal }) => {
               <div className={css.textWrapper}>
                 <span className={css.name}>{review.reviewer_name}</span>
                 <div className={css.ratingWrapper}>
-                  <img src="/Lingo-school/star.svg" alt="star" />
+                  <img src="/Lingo-school/star.svg" alt="star" loading="lazy" />
                   <span className={css.rating}>{review.reviewer_rating}.0</span>
                 </div>
               </div>
