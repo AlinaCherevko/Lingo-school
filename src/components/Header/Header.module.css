@@ -2,5 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 268px;
   padding: 20px 0;
 }

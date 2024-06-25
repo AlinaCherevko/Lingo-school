@@ -10,11 +10,13 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    margin-left: 120px;
   }
   .item {
     display: flex;
   }
   .logIn {
+    white-space: nowrap;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
