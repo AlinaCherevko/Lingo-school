@@ -20,7 +20,7 @@ const TeachersItem = ({ item }) => {
   const inFavorite = favorite.some((fav) => fav.id === item.id);
 
   const addToFavorite = () => {
-    if (inFavorite === true) {
+    if (inFavorite === true && isAuth === true) {
       dispatch(deleteFavorite(item.id));
       toast.success('Deleted successfully');
     }
@@ -75,7 +75,9 @@ const TeachersItem = ({ item }) => {
             <img
               onClick={addToFavorite}
               className={
-                inFavorite ? `${css.heart} ${css.favorite}` : css.heart
+                inFavorite && isAuth
+                  ? `${css.heart} ${css.favorite}`
+                  : css.heart
               }
               src="/Lingo-school/heart.svg"
               alt="heart"

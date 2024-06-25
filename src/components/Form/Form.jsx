@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import css from './Form.module.css';
 
 const Form = ({ title, handleClick, onClose, dataForm }) => {
-  // Динамічне створення схеми валідації залежно від переданих полів
   const validationSchema = {};
   dataForm.forEach((field) => {
     if (field.name === 'name') {

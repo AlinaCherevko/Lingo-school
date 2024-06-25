@@ -17,9 +17,7 @@ const BookingForm = ({ onClose }) => {
     setSelectedOption(event.target.value);
   };
 
-  const handleClick = () => {
-    console.log('booking is success');
-  };
+  const handleClick = () => {};
 
   return (
     <div>
