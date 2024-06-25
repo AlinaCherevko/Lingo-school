@@ -46,6 +46,13 @@ img {
 button {
   cursor: pointer;
 }
+a {
+  display: inline-block;
+}
+a.active {
+  color: var(--primary-green-9FBAAE);
+  border-bottom: 2px solid var(--primary-green-9FBAAE);
+}
 .container {
   padding-left: 64px;
   padding-right: 64px;
@@ -53,7 +60,24 @@ button {
   margin-right: auto;
   width: 100%;
 }
-a.active {
-  color: var(--primary-green-9FBAAE);
-  border-bottom: 2px solid var(--primary-green-9FBAAE);
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }

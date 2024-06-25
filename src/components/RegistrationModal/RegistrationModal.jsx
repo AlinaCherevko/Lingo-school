@@ -1,9 +1,11 @@
 import Auth from '../Auth/Auth';
+import CloseBtn from '../Buttons/CloseBtn/CloseBtn';
 import css from './RegistrationModal.module.css';
 
 const RegistrationModal = ({ onClose }) => {
   return (
     <div className={css.modal}>
+      <CloseBtn onClose={onClose} />
       <h2 className={css.title}>Registration</h2>
       <p className={css.text}>
         Thank you for your interest in our platform! In order to register, we

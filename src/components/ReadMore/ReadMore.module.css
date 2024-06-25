@@ -1,10 +1,8 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin-bottom: 32px;
-}
-.item {
+  gap: 12px;
+  margin-bottom: 12px;
 }
 .wrapper {
   display: flex;
@@ -65,9 +63,10 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 .btnList {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 .levelItem {
   font-size: 14px;
@@ -85,4 +84,71 @@
 }
 .levelItem:hover {
   background-color: var(--primary-green-9FBAAE);
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1440px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  .wrapper {
+    display: flex;
+    gap: 12px;
+  }
+  .image {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    gap: 2px;
+  }
+  .name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ratingWrapper {
+    display: flex;
+    gap: 8px;
+  }
+  .rating {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  .comments {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .button {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    padding: 16px 48px;
+  }
+
+  .btnList {
+    margin-bottom: 32px;
+    display: flex;
+    gap: 8px;
+  }
+  .levelItem {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+  }
 }

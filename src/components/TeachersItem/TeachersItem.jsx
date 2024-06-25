@@ -41,6 +41,17 @@ const TeachersItem = ({ item }) => {
       <div className={css.teacherItem}>
         <div className={css.imgWrapper}>
           <img className={css.image} src={item.avatar_url} alt={item.name} />
+          <img
+            onClick={addToFavorite}
+            className={
+              inFavorite && isAuth
+                ? `${css.heartMob} ${css.favorite}`
+                : css.heartMob
+            }
+            src="/Lingo-school/heart.svg"
+            alt="heart"
+            loading="lazy"
+          />
         </div>
         <div>
           <div className={css.textWrapper}>

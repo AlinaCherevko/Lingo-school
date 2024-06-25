@@ -1,7 +1,14 @@
 .navigation {
-  display: flex;
-  gap: 28px;
+  display: none;
+  cursor: pointer;
 }
-.headerLink {
-  color: inherit;
+
+@media (min-width: 1440px) {
+  .navigation {
+    display: flex;
+    gap: 28px;
+  }
+  .headerLink {
+    color: inherit;
+  }
 }

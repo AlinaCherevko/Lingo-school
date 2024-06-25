@@ -1,12 +1,16 @@
 .heroText {
-  padding: 98px 108px 98px 64px;
-  background-color: #f8f8f8;
+  width: 100%;
+  height: 430px;
+  padding: 20px 20px 36px 20px;
+  background-color: var(--secondary-beige-F8F8F8);
   border-radius: 30px;
 }
 .title {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 22px;
+  line-height: 28px;
   margin-bottom: 32px;
+  font-weight: 400;
+  text-align: left;
 }
 .language {
   font-style: italic;
@@ -14,16 +18,15 @@
   margin-left: 12px;
 }
 .text {
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 64px;
-  max-width: 471px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 40px;
 }
 .link {
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
-  padding: 16px 88px;
+  padding: 12px 30px;
   background-color: var(--secondary-green-CBDED3);
   border-radius: 12px;
   cursor: pointer;
@@ -35,4 +38,78 @@
 .link:hover {
   background-color: var(--primary-green-9FBAAE);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 320px) {
+  .heroText {
+    padding: 20px 20px 40px 20px;
+  }
+  .title {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 500;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .link {
+    padding: 16px 50px;
+  }
+}
+@media (min-width: 768px) {
+  .heroText {
+    padding: 30px 60px 90px 30px;
+  }
+  .title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .text {
+    margin-bottom: 80px;
+  }
+  .link {
+    padding: 16px 80px;
+  }
+}
+@media (min-width: 1440px) {
+  .heroText {
+    width: 760px;
+    height: 530px;
+    padding: 98px 108px 98px 64px;
+    background-color: var(--secondary-beige-F8F8F8);
+    border-radius: 30px;
+  }
+  .title {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 32px;
+  }
+  .language {
+    font-style: italic;
+    background-color: var(--secondary-green-CBDED3);
+    margin-left: 12px;
+  }
+  .text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 64px;
+    max-width: 471px;
+  }
+  .link {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    padding: 16px 88px;
+    background-color: var(--secondary-green-CBDED3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: var(--my-transition-duration);
+    transition-timing-function: var(--my-transition-timing-function);
+    transition-delay: var(--my-transition-delay);
+  }
+  .link:hover {
+    background-color: var(--primary-green-9FBAAE);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
 }

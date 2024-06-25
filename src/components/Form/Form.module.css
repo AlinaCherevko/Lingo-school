@@ -1,20 +1,3 @@
-.modal {
-  width: 566px;
-  height: 600px;
-  background-color: var(--primary-white-FFFFFF);
-  border-radius: 30px;
-  padding: 64px;
-}
-.title {
-  font-size: 40px;
-  line-height: 48px;
-  margin-bottom: 20px;
-}
-.text {
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 40px;
-}
 .formWrapper {
   display: flex;
   flex-direction: column;
@@ -25,7 +8,7 @@
   position: relative;
 }
 .input {
-  width: 438px;
+  width: 240px;
   height: 54px;
   border-radius: 12px;
   border: 1px solid rgba(18, 20, 23, 0.1);
@@ -34,9 +17,9 @@
   font-size: 18px;
   line-height: 28px;
   font-weight: 500;
-  padding: 16px 187px;
+  padding: 16px 20px;
   border-radius: 12px;
-  width: 438px;
+  width: 240px;
   border: none;
   background-color: var(--secondary-green-CBDED3);
   transition: all;
@@ -49,8 +32,28 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 .errorMessage {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
   position: absolute;
   color: red;
+}
+@media (min-width: 768px) {
+  .inputWrapper {
+    position: relative;
+  }
+  .input {
+    width: 438px;
+  }
+  .button {
+    padding: 16px 187px;
+
+    width: 438px;
+  }
+
+  .errorMessage {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1440px) {
 }

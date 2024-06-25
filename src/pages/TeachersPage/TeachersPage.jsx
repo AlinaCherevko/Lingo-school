@@ -25,7 +25,7 @@ const TeachersPage = () => {
   useEffect(() => {
     if (filteredData.length > 0) {
       setDataToShow(filteredData.slice(0, visibleItemsCount));
-      setIsLoadingMore(false); // Зупиняємо індикатор завантаження
+      setIsLoadingMore(false);
     }
   }, [visibleItemsCount, filteredData]);
 
@@ -54,7 +54,7 @@ const TeachersPage = () => {
   };
 
   const onloadMore = () => {
-    setIsLoadingMore(true); // Починаємо індикатор завантаження
+    setIsLoadingMore(true);
     setVisibleItemsCount((prevState) => prevState + itemsPerPage);
   };
 
@@ -64,8 +64,8 @@ const TeachersPage = () => {
         {data && (
           <>
             <div className={css.filters}>
-              <LevelSelector filterByLevel={filterByLevel} />
               <LanguageSelector filterByLanguage={filterByLanguage} />
+              <LevelSelector filterByLevel={filterByLevel} />
               <CostSelector filterByPrice={filterByPrice} />
             </div>
             <TeachersList data={dataToShow} />

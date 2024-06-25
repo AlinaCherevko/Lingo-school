@@ -1,9 +1,11 @@
 import BookingForm from '../BookingForm/BookingForm';
+import CloseBtn from '../Buttons/CloseBtn/CloseBtn';
 import css from './BookingModal.module.css';
 
 const BookingModal = ({ item, onClose }) => {
   return (
     <div className={css.modal}>
+      <CloseBtn onClose={onClose} />
       <h2 className={css.title}>Book trial lesson</h2>
       <p className={css.text}>
         Our experienced tutor will assess your current language level, discuss

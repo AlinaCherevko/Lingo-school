@@ -16,7 +16,7 @@ const Registration = () => {
   const [isModalLogInVisible, setIsModalLogInVisible] = useState(false);
 
   return (
-    <>
+    <div className={css.registrationWrapper}>
       {isAuth ? (
         <button onClick={() => dispatch(removeUser())} className={css.logIn}>
           Log out
@@ -60,7 +60,7 @@ const Registration = () => {
           <LogInModal onClose={() => setIsModalLogInVisible(false)} />
         </Modal>
       )}
-    </>
+    </div>
   );
 };
 
