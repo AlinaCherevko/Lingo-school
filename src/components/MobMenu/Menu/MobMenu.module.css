@@ -1,10 +1,16 @@
 .mobMenu {
+  position: absolute;
+  top: 20px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   background-color: var(--primary-white-FFFFFF);
-  height: 100vh;
+  height: 440px;
   padding: 24px;
+  z-index: 1000;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .navigation {
   display: flex;
@@ -90,6 +96,11 @@
   box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.2),
     0 6px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  .mobMenu {
+    width: 700px;
+  }
 }
 @media (min-width: 1440px) {
   .mobMenu {

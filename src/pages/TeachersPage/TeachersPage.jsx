@@ -69,9 +69,11 @@ const TeachersPage = () => {
               <CostSelector filterByPrice={filterByPrice} />
             </div>
             <TeachersList data={dataToShow} />
-            <button className={css.button} type="button" onClick={onloadMore}>
-              {isLoadingMore ? <LoadingSpinner /> : 'Load more'}
-            </button>
+            {dataToShow.length === visibleItemsCount && (
+              <button className={css.button} type="button" onClick={onloadMore}>
+                {isLoadingMore ? <LoadingSpinner /> : 'Load more'}
+              </button>
+            )}
             {dataToShow.length > 0 ||
               (!isLoading && <p>No any matches for your request</p>)}
           </>

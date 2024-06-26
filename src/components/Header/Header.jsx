@@ -17,16 +17,13 @@ export const Header = () => {
   };
   return (
     <div className="container">
-      {!isVisibleMobMenu ? (
-        <div className={css.header}>
-          <Logo />
-          <Navigation />
-          <Registration />
-          <BurgerBtn onOpen={onOpen} />
-        </div>
-      ) : (
-        <MobMenu onClose={onClose} />
-      )}
+      <div className={css.header}>
+        <Logo />
+        <Navigation />
+        <Registration />
+        <BurgerBtn onOpen={onOpen} />
+      </div>
+      {isVisibleMobMenu && <MobMenu onClose={onClose} />}
     </div>
   );
 };

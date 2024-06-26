@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { useAuth } from './hooks/useAuth';
 import { Suspense, lazy } from 'react';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const TeachersPage = lazy(() => import('./pages/TeachersPage/TeachersPage'));
@@ -22,6 +23,7 @@ function App() {
             element={isAuth ? <FavoritePage /> : <Navigate to="/" />}
           />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
   );
