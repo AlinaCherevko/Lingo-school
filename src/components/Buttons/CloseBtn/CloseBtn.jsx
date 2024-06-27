@@ -7,6 +7,7 @@ const CloseBtn = ({ onClose }) => {
         src="./close.svg"
         alt="close-icon"
         className={css.closeBtn}
+        loading="lazy"
       />
     </div>
   );

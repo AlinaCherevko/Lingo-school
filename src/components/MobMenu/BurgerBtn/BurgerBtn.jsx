@@ -7,6 +7,7 @@ const BurgerBtn = ({ onOpen }) => {
         className={css.burgerBtn}
         src="./burger-menu.svg"
         alt="burger-btn"
+        loading="lazy"
       />
     </div>
   );
